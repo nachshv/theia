@@ -89,11 +89,11 @@ type DiagnosticMap = Map<string, Diagnostic[]>;
     }
 
     function warn(issues: DiagnosticMap, extension: string, message: string): void {
-        return log(issues, extension, message, 'warn');
+        log(issues, extension, message, 'warn');
     }
 
     function error(issues: DiagnosticMap, extension: string, message: string): void {
-        return log(issues, extension, message, 'error');
+        log(issues, extension, message, 'error');
     }
 
     function log(issues: DiagnosticMap, extension: string, message: string, type: DiagnosticType): void {
