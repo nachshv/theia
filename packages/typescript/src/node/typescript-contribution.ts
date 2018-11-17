@@ -49,7 +49,7 @@ export class TypeScriptContribution extends BaseLanguageServerContribution {
     }
 
     start(clientConnection: IConnection): void {
-        const command = 'node';
+        const command = process.argv0; // Stands for `node`, but `node` is not always on the path.
         const args: string[] = [
             __dirname + '/startserver.js',
             '--stdio'

@@ -26,7 +26,7 @@ export class JsonContribution extends BaseLanguageServerContribution {
     readonly name = JSON_LANGUAGE_NAME;
 
     start(clientConnection: IConnection): void {
-        const command = 'node';
+        const command = process.argv0; // Stands for `node`, but `node` is not always on the path.
         const args: string[] = [
             path.resolve(__dirname, './json-starter'),
             '--stdio'
